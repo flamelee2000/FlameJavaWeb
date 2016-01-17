@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"/dtd/struts-2.3.dtd">
+<struts>
+    <package name="default" namespace="/" extends="struts-default">
+
+        <global-results>
+            <result name="error">/WEB-INF/content/jsp/error.jsp</result>
+        </global-results>
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+
+        <action name="computing" class="maven.com.whoeveryou.Computing">
+            <result name="success">/WEB-INF/content/jsp/computing.jsp</result>
+        </action>
+              
+    </package>
+</struts>
